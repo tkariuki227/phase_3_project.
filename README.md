@@ -41,7 +41,7 @@ Conclusion
 The Decision Tree model outperformed Logistic Regression and is recommended for deployment. It helps identify at-risk customers with high accuracy, offering SyriaTel the opportunity to retain customers through better service or targeted offers.
 ________________________________________
  How to Run the Project
-1.	Open the Jupyter Notebook (SyriaTel_Churn_Prediction.ipynb)
+1.	Open the Jupyter Notebook (tproject.ipynb)
 2.	Run the cells step by step (you need Python, pandas, scikit-learn, matplotlib, seaborn)
 3.	You’ll see the cleaning steps, model training, evaluations, and visualizations
 ________________________________________
