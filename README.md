@@ -1,48 +1,53 @@
-# phase_3_project.
-This project aims to predict customer churn for SyriaTel, a telecom company. By identifying these customers early, the company can take action to keep them.
-SyriaTel Customer Churn Prediction 
- Data Preparation
-We started with a dataset containing information about over 3,000 customers, including details like:
-•	Whether they have an international plan
-•	How many minutes they use during the day, evening, and night
-•	How often they call customer service
-•	Whether they have a voicemail plan
-Steps taken:
-•	Cleaned the data by removing irrelevant columns and checking for missing values or duplicates.
-•	Converted all the data into a suitable format for machine learning (like changing “yes”/“no” to 1/0).
-•	Scaled the data to make the values more comparable.
-•	Balanced the dataset to fix the issue of having more non-churners than churners.
+ ## SyriaTel Customer Churn Prediction
+## Project Overview
+This project explores customer churn (when customers leave a service) for SyriaTel, a telecommunications company. The goal was to build a machine learning model that can predict which customers are likely to churn, so that the company can take preventive action.
 ________________________________________
-Model Building
-We trained two models to predict churn:
-1.	Logistic Regression (basic model we studied in class):
-o	Accuracy: 86%
-o	Predicted most non-churners well.
-o	Struggled a bit with correctly identifying customers who actually left.
-o	Still gave useful insights into important factors.
-2.	Decision Tree (extra model for comparison):
-o	Accuracy: 91%
-o	Performed better at catching both churners and non-churners.
-o	Easier to interpret visually (we can see decision paths).
-o	Slightly more complex than Logistic Regression.
+ Dataset
+The dataset was provided as part of the course and includes over 3,000 customer records with the following details:
+•	Usage statistics (day, evening, night, international)
+•	Service plans (international plan, voicemail plan)
+•	Customer service calls
+•	Whether the customer churned or not
+________________________________________
+ Data Cleaning
+•	Dropped irrelevant columns (like state and phone number).
+•	Handled missing values and checked for duplicates.
+•	Converted categorical data (like "yes"/"no") to numeric values.
+•	Scaled numerical features for better model performance.
+•	Balanced the dataset to handle class imbalance (more non-churners than churners).
+________________________________________
+Models Used
+1. Logistic Regression
+•	A simple, interpretable model.
+•	Accuracy: ~86%
+•	Helped understand which features influence churn.
+2. Decision Tree Classifier
+•	More flexible and accurate model.
+•	Accuracy: ~91%
+•	Performed better at identifying churners.
 ________________________________________
 Key Insights
-The most important factors linked to churn:
-•	Having an international plan increases the chance of leaving.
-•	Frequent customer service calls is a strong sign of dissatisfaction.
-•	Customers with no voicemail plan or low voicemail usage were more likely to churn.
-•	High day-time usage was also linked to higher churn.
+•	Customers with international plans and those who made many service calls were more likely to churn.
+•	Having a voicemail plan or higher voicemail message counts were linked to loyalty.
+•	High daytime usage also appeared in many churn cases.
 ________________________________________
-Visual Results
-We used visual charts to show:
-•	How the model makes decisions.
-•	Which features matter the most.
-•	How well the model distinguishes between churners and non-churners.
-These visuals make it easier for anyone to understand the patterns in customer behavior.
+ Visualizations
+•	Confusion matrices to show model predictions.
+•	ROC curve to measure model performance.
+•	Bar charts showing most important features.
+•	Target variable distribution (churn vs. no churn).
 ________________________________________
-Conclusion & Recommendation
-Our Logistic Regression model gave a strong baseline, but the Decision Tree performed better overall, especially at identifying customers who are at risk of leaving.
-We recommend:
-•	Monitoring customers with international plans and high service calls.
-•	Using this model to flag at-risk customers early so SyriaTel can offer promotions or improved service.
-•	Continuing to improve the model with more data over time.
+Conclusion
+The Decision Tree model outperformed Logistic Regression and is recommended for deployment. It helps identify at-risk customers with high accuracy, offering SyriaTel the opportunity to retain customers through better service or targeted offers.
+________________________________________
+ How to Run the Project
+1.	Open the Jupyter Notebook (SyriaTel_Churn_Prediction.ipynb)
+2.	Run the cells step by step (you need Python, pandas, scikit-learn, matplotlib, seaborn)
+3.	You’ll see the cleaning steps, model training, evaluations, and visualizations
+________________________________________
+Author
+•	Name: [Teresia Kariuki]
+•	Course: Machine Learning Fundamentals
+•	Instructor: [Brian Chacha]
+•	Date: [9.05.2025]
+
